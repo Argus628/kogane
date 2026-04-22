@@ -3,8 +3,8 @@ $path = "$env:APPDATA\KoganeIA"
 if (!(Test-Path $path)) { New-Item -ItemType Directory -Path $path -Force }
 
 # Descargar el agente y el archivo de API Key
-Invoke-WebRequest "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/agent.py" -OutFile "$path\agent.py"
-Invoke-WebRequest "https://raw.githubusercontent.com/TU_USUARIO/TU_REPO/main/api.key" -OutFile "$path\api.key"
+Invoke-WebRequest "https://raw.githubusercontent.com/Argus628/kogane/main/agent.py" -OutFile "$path\agent.py"
+Invoke-WebRequest "https://raw.githubusercontent.com/Argus628/kogane/main/api.key" -OutFile "$path\api.key"
 
 # Instalar dependencias necesarias
 pip install pyserial google-generativeai pyautogui speechrecognition pyaudio
